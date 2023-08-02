@@ -1,0 +1,14 @@
+.intro {
+
+    position: relative;
+
+    &__content {
+        position: absolute;
+        top: 27px;
+        left: 39px;
+
+        & span {
+            color: #B93B3B;
+        }
+    }
+}
