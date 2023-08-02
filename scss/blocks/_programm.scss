@@ -1,0 +1,20 @@
+.programm {
+    text-align: center;
+
+    &__h3 {
+        font-family: $font-accent;
+        @include fonty(1.5rem, 600, 2rem);
+        color: $title-color;
+    }
+
+    &__subtitle {
+        @include fonty(1rem, 600, 1.2rem);
+    }
+
+
+
+    .where-to {
+        color: $text-color;
+
+    }
+}

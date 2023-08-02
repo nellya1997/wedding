@@ -11,6 +11,17 @@
 }
 
 @font-face {
+  font-family: 'Gilroy';
+  src:
+    url("../font/gilroy-medium.ttf") format ("ttf"),
+    url("../font/gilroy-medium.woff2") format("woff2"),
+    url("../font/gilroy-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-weight: 600;
   font-family: 'Gilroy';
   /* Соответствует значению "почти" bold )) */
@@ -30,14 +41,22 @@
 html {
   font-family: $font-main;
   font-weight: 400;
+  //FS изначально 20 - менять теперь нельзя, делаю в rem и em
   font-size: 20px;
-  line-height: 20px;
   min-width: 320px;
 }
 
 body {
   max-width: 100vw;
   min-width: 320px;
+  color: $text-color;
+}
+
+//main в роли контейнера
+
+main {
+  @include centry(78%);
+  border: 2px solid red;
 }
 
 .stop-scroll {
@@ -64,4 +83,16 @@ button {
     height: 100%;
     object-fit: contain;
   }
+}
+
+h1 {
+  font-family: $font-accent;
+  @include fonty(1.5rem, 600, 2rem);
+  color: $title-color;
+}
+
+.h2 {
+  font-family: $font-accent;
+  @include fonty(1.5rem, 600, 2rem);
+  color: $title-color;
 }
