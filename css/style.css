@@ -6,6 +6,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -341,31 +342,19 @@ template {
 }
 
 @font-face {
-  font-family: "Manrope";
-  src: url(../fonts/Manrope-Regular.woff) format("woff2"), url(../fonts/Manrope-Regular.woff2) format("woff");
+  font-family: "Gilroy";
+  src: url("../font/gilroy-regular.woff2") format("woff2"), url("../fonts/gilroy-regular.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-weight: 500;
-  font-family: "Manrope";
-  src: url(../fonts/Manrope-Medium.woff2) format("woff2"), url(../fonts/Manrope-Medium.woff) format("woff");
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-weight: 600;
+  font-family: "Gilroy";
   /* Соответствует значению "почти" bold )) */
-  font-family: "Manrope";
-  src: url(../fonts/Manrope-SemiBold.woff2) format("woff2"), url(../fonts/Manrope-SemiBold.woff) format("woff");
+  src: url("../font/gilroy-semibold.woff2") format("woff2"), url("../font/gilroy-semibold.woff") format("woff");
   font-style: normal;
   font-display: swap;
-}
-@font-face {
-  font-weight: 400;
-  font-family: "Constantine";
-  src: url("../fonts/Constantine.woff") format("woff"), url("../fonts/Constantine.woff2") format("woff2");
 }
 * {
   box-sizing: border-box;
@@ -374,7 +363,7 @@ template {
 }
 
 html {
-  font-family: "Manrope", sans-serif;
+  font-family: "Gilroy", serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
@@ -383,7 +372,6 @@ html {
 
 body {
   max-width: 100vw;
-  height: 100%;
   min-width: 320px;
 }
 
@@ -402,99 +390,15 @@ button {
 
 .picture {
   display: inline-block;
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 200px;
+  border: 2px solid red;
 }
 .picture img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-ul {
-  list-style: none;
-}
-
-.picture {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-}
-.picture img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  vertical-align: middle;
-}
-.portfolio__wrapper .picture {
-  width: calc(20% - 5px);
-  height: 130px;
-  cursor: pointer;
-}
-.portfolio__wrapper .picture--desktop {
-  display: none;
-}
-.portfolio__wrapper .picture:nth-child(-1n+3) {
-  width: calc(33% - 10px);
-  height: 137px;
-  margin-bottom: 6px;
-}
-.picture--portfolio {
-  padding: 0px 3px;
-  height: 49vh;
-}
-.picture--portfolio img {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.portfolio__wrapper .portfolio__slides .picture {
-  height: 170px;
-  width: calc(50% - 10px);
-}
-.about__photo-right .picture--desktop {
-  display: none;
-}
-.reviews .picture {
-  height: 396px;
-}
-.reviews .picture img {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-@media (min-width: 768px) {
-  .portfolio__wrapper .picture, .portfolio__wrapper .picture:nth-child(-1n+3) {
-    height: 275px;
-  }
-}
-@media (min-width: 1440px) {
-  .portfolio__wrapper .picture--desktop {
-    display: block;
-  }
-  .portfolio__wrapper .picture, .portfolio__wrapper .picture:nth-child(-1n+3), .portfolio__wrapper .picture:nth-child(-1n+8) {
-    width: calc(12.5% - 17px);
-    height: 257px;
-  }
-  .portfolio__wrapper .picture:nth-last-child(-1n+8) {
-    height: 360px;
-  }
-  .portfolio__wrapper .picture:nth-child(-1n+8) {
-    margin-bottom: 31px;
-  }
-}
-@media (min-width: 1920px) {
-  .about__photo-right .picture--desktop {
-    display: block;
-  }
-  .about__photo-right .picture {
-    height: calc(50% - 1px);
-  }
-  .about__photo-right .picture img {
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-  .about__photo-left .picture {
-    max-height: 611px;
-  }
 }
 
 .intro {
