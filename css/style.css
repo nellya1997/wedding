@@ -459,7 +459,9 @@ h1 {
   padding: 0.5em 0;
 }
 .second__timer {
-  background-color: pink;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2rem;
 }
 
 .programm {

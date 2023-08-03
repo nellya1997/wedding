@@ -1,6 +1,9 @@
 "use strict";
-
+//      header's text spiner
 const headerSpiner = function () {
+
+
+
     const text = document.querySelector('.spin__text');
 
     text.innerHTML = text.textContent.replace(/\S/g, '<span>$&</span>');
@@ -21,6 +24,42 @@ const headerSpiner = function () {
         console.log(e.clientY);
     });
     */
+
 }
 
 headerSpiner();
+
+
+//   TIMER
+
+const weddingDay = 'September 30 2023 11:00:00 GMT+04:00';
+
+function getTimeRemaining(endtime) {
+    let t = Date.parse(endtime) - Date.parse(new Date());
+    let seconds = Math.floor((t / 1000) % 60);
+    let minutes = Math.floor((t / 1000 / 60) % 60);
+    let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+    let days = Math.floor(t / (1000 * 60 * 60 * 24));
+    return {
+        'total': t,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    };
+}
+
+function initializeClock(selector, endtime) {
+    let clock = document.querySelector(selector);
+    let timeinterval = setInterval(function () {
+
+        let t = getTimeRemaining(endtime);
+        console.log(t);
+        clock.innerHTML = `Дней: ${t.days} : часов: ${t.hours} : минут : ${t.minutes}`;
+        if (t.total <= 0) {
+            clearInterval(timeinterval);
+        }
+    }, 1000);
+}
+
+initializeClock('.second__timer', weddingDay);
