@@ -1,14 +1,18 @@
 .intro {
-
     position: relative;
 
     &__content {
         position: absolute;
-        top: 27px;
-        left: 39px;
+        top: 1.35em;
+        left: 1.95em;
 
         & span {
-            color: #B93B3B;
+            color: $title-color;
         }
+    }
+
+    .spin__text {
+        top: initial;
+        bottom: 6em;
     }
 }
