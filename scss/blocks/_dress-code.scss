@@ -1,3 +1,18 @@
+.dress-code {
+    text-align: center;
+    padding: 0.8em 0;
+
+    &__text {
+        @include fonty(0.8rem, 400, 1rem);
+        padding-bottom: 1em;
+    }
+
+    img {
+        @include centry(99%);
+    }
+}
+
+
 /*
 .dress-code__item {
     position: relative;
